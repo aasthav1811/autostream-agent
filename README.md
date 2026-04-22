@@ -25,5 +25,17 @@ State is managed using a shared AgentState object that persists across conversat
 
 The RAG pipeline is implemented using a local JSON knowledge base, ensuring deterministic and fast responses for pricing and policy queries without relying solely on the LLM.
 
-C) WhatsApp Integration:
+C) Workflow
+User → Intent Detection → RAG → High Intent → Lead Capture → Tool Execution
+
+D) Tech Stack
+- Python
+- LangGraph
+- LangChain
+- JSON (Knowledge Base)
+
+E) WhatsApp Integration:
 To integrate with WhatsApp, I would use the WhatsApp Business API (via Meta or Twilio). Incoming messages would be received through a webhook endpoint (Flask/FastAPI). The webhook would pass the user message to the LangGraph agent, maintain session state using a database (Redis or PostgreSQL), and return the agent’s response back to WhatsApp via the API. This enables persistent conversations across multiple user sessions.
+
+F) Future Scope
+Future improvements include vector embeddings for semantic retrieval and LLM-based intent classification.
