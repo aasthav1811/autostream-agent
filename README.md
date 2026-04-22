@@ -37,5 +37,5 @@ D) Tech Stack
 E) WhatsApp Integration:
 To integrate with WhatsApp, I would use the WhatsApp Business API (via Meta or Twilio). Incoming messages would be received through a webhook endpoint (Flask/FastAPI). The webhook would pass the user message to the LangGraph agent, maintain session state using a database (Redis or PostgreSQL), and return the agent’s response back to WhatsApp via the API. This enables persistent conversations across multiple user sessions.
 
-F) Future Scope
+F) Future Scope:
 Future improvements include vector embeddings for semantic retrieval and LLM-based intent classification.
